@@ -73,10 +73,11 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
-  const response = await fetch('https://openai-codex-2jrq.onrender.com/', {
+  const response = await fetch('http://localhost:3000/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       prompt: data.get('prompt')
